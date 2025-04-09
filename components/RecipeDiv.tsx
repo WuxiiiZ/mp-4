@@ -1,6 +1,7 @@
 "use client"
 import styled from "styled-components";
 import React from "react";
+import type{Recipe} from "@/interface/Recipes";
 
 const StyledDiv = styled.div`
     width: 80vw;
@@ -40,11 +41,12 @@ const Tag = styled.span`
     color:blanchedalmond;   
 `
 
-export default function RecipeDiv({params, data}) {
+export default function RecipeDiv(props:{data:{meals: Recipe[]};
+}) {
     return (
         <StyledDiv>
-            <h1>Here is the search result of <i>{params.search}</i>: </h1>
-            {data.meals.map((meal) => (
+            <h1>Here is the search result : </h1>
+            {props.data.meals.map((meal) => (
                 <Recipe key={meal.idMeal}>
                     <Introdiv>
                         <Tag>Name: </Tag>{meal.strMeal}

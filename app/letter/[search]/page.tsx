@@ -26,7 +26,7 @@ export default function LetterSearch() {
     if (!data.meals) return (<ErrorDiv>There is no related data. Please try again.</ErrorDiv>);
     return (
         <>
-            <RecipeDiv params={params} data={data}></RecipeDiv>
+            <RecipeDiv data={data}></RecipeDiv>
         </>
     )
 }

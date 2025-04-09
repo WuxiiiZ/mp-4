@@ -11,6 +11,7 @@ const ErrorDiv = styled.div`
 
 export default function Info() {
     const params = useParams();
+    const paramsStr = String(params.search);
     const {data, error} = useSWR(`/api/getData?s=${params.search}`,
         (url)=>
             fetch(url)
@@ -22,7 +23,7 @@ export default function Info() {
         </ErrorDiv>);
     if (!data.meals) return (<ErrorDiv>There is no related data. Please try again.</ErrorDiv>);
     return (
-        <RecipeDiv params={params} data={data} />
+        <RecipeDiv data={data} />
     )
 }
 
