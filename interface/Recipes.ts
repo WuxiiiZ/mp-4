@@ -3,6 +3,6 @@ export interface Recipe {
     strMeal: string;
     strCategory: string;
     strArea: string;
-    strTags?: string;
+    strTags: string;
     strMealThumb: string;
 }
