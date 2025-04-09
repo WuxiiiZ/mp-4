@@ -46,7 +46,7 @@ export default function Home(){
   return(
       <StyledDiv>
           <Wrapper>
-              <label htmlFor="input-bar"><strong>Please type to search for food: </strong></label>
+              <label htmlFor="input-bar"><strong>Please type to search for meals: </strong></label>
               <input
                   type="text"
                   placeholder="You can input either a letter or words.(e.g. a or apple)"
