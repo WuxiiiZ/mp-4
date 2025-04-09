@@ -11,7 +11,6 @@ const ErrorDiv = styled.div`
 
 export default function Info() {
     const params = useParams();
-    const paramsStr = String(params.search);
     const {data, error} = useSWR(`/api/getData?s=${params.search}`,
         (url)=>
             fetch(url)
